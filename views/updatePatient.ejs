@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>Update Patient Details</title>
+    <style>
+        body{
+            text-align: center !important;
+            background-image: radial-gradient(circle, pink, lightpink, hotpink, purple);
+        }
+        #div1{
+            border-style: solid;
+            background-color: burlywood;
+            margin: auto;
+            width: 800px;
+            padding: 20px;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <br><br>
+    <div id="div1">
+        <form action="/update-patient-record:id <% profile.id %> " method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="Text" id="name" name="name" value="<%= profile.name %>"> 
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value="<%= profile.age %>"> 
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="Email" id="email" name="email" value=" <%= profile.email %> ">
+            </div>
+            <br><br>
+            <div>
+                <button type="submit">Save Changes</button><br><br>
+            </div>
+            <div>
+                <button><a href="/view-patient-info">Back</a></button>
+            </div>
+        </form>  
+    </div>
+    
+</body>
+</html>

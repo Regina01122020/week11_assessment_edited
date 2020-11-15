@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>Doctor Registration</title> 
+    <style>
+        body{
+            text-align: center !important;
+            background-image: radial-gradient(circle, lightblue, cadetblue, blue, darkblue, navy);
+        }
+        #div1{
+            border-style: solid;
+            background-color: burlywood;
+            margin: auto;
+            width: 800px;
+            padding: 20px;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <div id="div1">
+    <h3> Register a new doctor into the system </h3>
+      <form action="/doctor-details" method="POST"> 
+          <label for="fullName">Name:</label>
+          <input type="Text" id="fullName" name="fullName" required><br><br>
+          <label for="email">Email Address:</label>
+          <input type="Email" id="email" name="email" required><br><br>
+          <label for="password">Password:</label>
+          <input type="Password" id="password" name="password" required><br><br>
+          <button> Submit </button> 
+      </form>
+      <br><br>
+        <div>
+            <span>Already Registered! <a href="/view-doctor-info">View Doctor's Details</a></span> 
+        </div> 
+    </div>
+</body>
+</html>

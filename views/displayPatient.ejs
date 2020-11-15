@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Patient Details</title> 
+    <style>
+        body{
+            text-align: center !important;
+            background-image: radial-gradient(circle, pink, lightpink, hotpink, purple);
+        }
+        #div1{
+            border-style: solid;
+            background-color: burlywood;
+            margin: auto;
+            width: 800px;
+            padding: 20px;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+
+    <br><br>
+    <div id="div1">
+        <h2>List of registered patients in the system.</h2>
+    <center><table class="table" cellpadding ="5" style ="background-color: lightcyan;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email Address</th> 
+                    <th>Display</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% profile.forEach(user => { %>
+                <tr>
+                    <td><%= user.name%></td>
+                    <td><%= user.age%></td>
+                    <td><%= user.email%></td>
+                    <td><button><a href="/view-doctor-info">View Doctors</a></button></td>
+                    <td><form action="/delete-patient-record:id <% profile._id %>" method="DELETE">
+                            <button type="submit">Delete</button>
+                         </form>
+                    </td>
+                    <td><button><a href="/update-patient-record">Update</a></button></td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table></center><br><br>
+    <div>
+        <button><a href="/"> Logout </a></button>
+    </div>
+    </div>
+    
+</body>
+</html>
